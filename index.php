@@ -1,0 +1,3 @@
+<?php
+echo "Hellol, world!";
+?>
