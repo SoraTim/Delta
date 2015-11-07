@@ -1,0 +1,103 @@
+#Menu
+{
+    margin: 5px 5px;
+}
+#page
+{
+    width: 100%;
+    height: 100%;
+}
+.sampleBlock
+{
+    width: 200px;
+    height: 20px;
+    color: #FFF;
+    background-color: #f79916;
+    font-size:  14px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: move;
+}
+.menuDiv
+{
+    display: inline-block;
+    background-color: #621a4d;
+    color: #FFF;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.menuDiv:hover
+{
+   background-color: #f10e0e;
+}
+#Content
+{
+    font-size: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #808080;
+    position:relative;
+}
+#leftSideBar
+{
+    margin: 5px 5px;
+    background-color: rgba(238, 240, 57, 0.91);
+    color: #16204e;
+    font-weight:  bold;
+    border-radius: 0px 5px 5px 0px;
+    padding: 5px;
+    font-size: 16px;
+    display: inline-block;
+    width: calc(20% - 10px);
+}
+#pageHolder
+{
+    float: right;
+    position: absolute;
+    width:  calc(100% - 5px);
+    height: calc(100% - 40px);
+    display: block;
+    border: 1px solid white;
+}
+#Menu input
+{
+    border-radius: 5px;
+    border:  1px solid rgb(40, 226, 19);
+    padding: 5px;
+}
+#topMenuBar
+{
+    margin-top: 5px;
+    position: absolute;
+    display: inline-block;
+    width: calc(80% - 10px);
+    height: 100%;
+}
+.singleTab
+{
+    margin-left: 5px;
+    font-size: 16px;
+    display: inline-block;
+    color:  #FFF;
+    background-color: #2cd3de;
+    border-radius: 4px 4px 0px 0px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.singleTab:hover, .singleTab:active
+{
+    background-color: #0a38ec;
+}
+body, html
+{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
