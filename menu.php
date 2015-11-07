@@ -13,11 +13,11 @@
 <!-- MENU. END -->
 <div id="Content">
         <div id="leftSideBar">
-            <span>&lt;p&gt; Параграф<br></span>
-            &lt;table&gt; Таблица<br>
-            &lt;img&gt; Изображение<br>            
-            &lt;div&gt; Блок div<br>
-            &lt;span&gt; Блок span<br>            
+            <span>&lt;p&gt; Параграф</span><br>
+            <span>&lt;table&gt; Таблица</span><br>
+            <span>&lt;img&gt; Изображение</span><br>
+            <span>&lt;div&gt; Блок div</span><br>
+            <span>&lt;span&gt; Блок span</span><br>            
         </div>
         <div id="topMenuBar">
             <div style="position: relative; width: 100%; height: 100%">

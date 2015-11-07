@@ -55,6 +55,13 @@
     display: inline-block;
     width: calc(20% - 10px);
 }
+#leftSideBar span:hover
+{
+    cursor: pointer;
+    background-color: rgba(24, 185, 228, 0.81);
+    color:  #FFF;
+    border-radius: 3px;
+}
 #pageHolder
 {
     float: right;
