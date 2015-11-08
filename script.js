@@ -24,7 +24,10 @@ $(document).ready(function () {
         });
     }
 
-
+    $(document).on('click', '#refreshPageSpan', function () 
+    {
+        location.reload();
+    });
     $("#leftSideBar span").click(function () {
         var text = this.innerHTML.substring(4, this.innerHTML.indexOf("&gt;"));
         if (text.indexOf("\"") <= 0)

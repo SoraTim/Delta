@@ -24,6 +24,29 @@
             <span>&lt;input type="text"&gt;</span><br>
             <span>&lt;input type="password"&gt;</span><br>            
             <span>&lt;textarea&gt;</span><br>
+            <select>
+                <option value="" disabled selected>
+                    &lt;hX&gt;
+                 </option>
+                <option>
+                    &lt;h1&gt;
+                </option>
+                <option>
+                    &lt;h2&gt;
+                </option>
+                <option>
+                    &lt;h3&gt;
+                </option>                
+                <option>
+                    &lt;h4&gt;
+                </option>
+                <option>
+                    &lt;h5&gt;
+                </option>
+                <option>
+                    &lt;h6&gt;
+                </option>
+            </select>
         </div>
         <div id="topMenuBar">
             <div style="position: relative; width: 100%; height: 100%">
