@@ -2,9 +2,32 @@
 {
     margin: 5px 5px;
 }
+.sampleParagraph
+{
+    font-size: 14px;
+    color: #FFF;
+}
 .codeHolder
 {
     resize: none;
+}
+.ownContextMenu
+{
+    display:block;
+    z-index: 2;
+    top: 0;
+    font-weight: bold;
+    position: absolute;
+    padding:  2px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    background-color: rgb(40, 226, 19);
+    color:  #FFF;
+}
+.ownContextMenu span:hover
+{
+    font-style: italic;
+    color: #ff0000;
 }
 #page
 {
