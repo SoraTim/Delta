@@ -49,7 +49,16 @@
             </select>
         </div>
          <div id="pages">
-             ЗДЕСЯМА СПИСКАМА СТРАНИЦАМАНА
+             <div id="pagesWrapper">
+                 <div id="pagesBanner">
+                     СТРАНИЦЫ
+                 </div>
+                 <div id="pagesLinks">
+                     <ul>
+                         <li>index.php</li>
+                     </ul>
+                 </div>
+             </div>
          </div>
         <div id="topMenuBar">
             <div style="position: relative; width: 100%; height: 100%">
