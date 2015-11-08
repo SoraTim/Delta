@@ -1,7 +1,8 @@
 $(document).ready(function () {
     $("html").click(function () {
         var elem = document.getElementsByClassName("ownContextMenu")[0];
-        document.getElementsByTagName("body")[0].removeChild(elem);
+        if (elem != null)
+            document.getElementsByTagName("body")[0].removeChild(elem);
     });
     if (document.addEventListener) {
         document.addEventListener('contextmenu', function (e) {
@@ -38,8 +39,7 @@ $(document).ready(function () {
                 node.src = "sampleImg.jpg";
                 break;
             case "div":
-                node.className = "sampleBlock";
-                node.className = "dynamicElement";
+                node.className = "sampleBlock dynamicElement";
                 node.innerHTML = "DIV";
                 break;
             case "span":
@@ -57,8 +57,17 @@ $(document).ready(function () {
                 break;
         }
         var myNode = document.getElementById("pageHolder");
+        if (document.getElementById("clear").style.display == 'none')
+            $("#clear").show();
         myNode.appendChild(node);
     });
+    $("#clear").click(function () {
+        var myNode = document.getElementById("pageHolder");
+        while (myNode.firstChild) {
+            myNode.removeChild(myNode.firstChild);
+        }
+        $("#clear").hide();
+    })
     $('#code').click(function () {
 
         var myNode = document.getElementById("pageHolder");

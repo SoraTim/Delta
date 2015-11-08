@@ -8,6 +8,9 @@
     <div class="menuDiv">
         Закрыть
     </div>
+    <div class="menuDiv" id="clear" style="display: none">
+        Очистить
+    </div>
     <input type="text" placeholder="Название страницы">
 </div>
 <!-- MENU. END -->
