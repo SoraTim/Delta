@@ -42,7 +42,43 @@
     width: 100%;
     background-color: rgba(255,255,255,.6);
 }
-#pagesBanner
+#leftSideWrap
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+#leftBar
+{
+    font-family: customFont;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000;
+    z-index: 0;
+    font-size: 40px;
+    height: 100%;
+    width: 100%;
+}
+#wrapEl
+{
+    height: 100%;
+    width: 100%;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+}
+#elementsList
+{
+    padding: 5px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: rgba(255,255,255,.6);
+    z-index: 1;
+    position: relative;
+    display: block;
+}
+.pagesBanner
 {
     display: table-cell;
     vertical-align: middle;
@@ -126,7 +162,6 @@
     color: #16204e;
     font-weight:  bold;
     border-radius: 0px 5px 5px 0px;
-    padding: 5px;
     font-size: 16px;
     display: inline-block;
     width: calc(20% - 10px);
