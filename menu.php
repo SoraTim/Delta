@@ -17,14 +17,17 @@
             <span>&lt;table&gt; Таблица</span><br>
             <span>&lt;img&gt; Изображение</span><br>
             <span>&lt;div&gt; Блок div</span><br>
-            <span>&lt;span&gt; Блок span</span><br>            
+            <span>&lt;span&gt; Блок span</span><br>
+            <span>&lt;input type="text"&gt;</span><br>
+            <span>&lt;input type="password"&gt;</span><br>            
+            <span>&lt;textarea&gt;</span><br>
         </div>
         <div id="topMenuBar">
             <div style="position: relative; width: 100%; height: 100%">
                 <div class="singleTab">
                     Вид
                 </div>
-                <div class="singleTab">
+                <div id="code" class="singleTab">
                     Код
                 </div>
                 <br>
