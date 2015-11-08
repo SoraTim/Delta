@@ -8,7 +8,7 @@ $(document).ready(function () {
         document.addEventListener('contextmenu', function (e) {
             if ($(e.target).is(".dynamicElement")) {
                 var node = document.createElement("div");
-                node.innerHTML = "<span>Refresh</span><br><span>Change class</span>";
+                node.innerHTML = "<img src='refresh.png'><span id='refreshPageSpan'>Refresh</span><br><span id='changeClassSpan'>Change class</span><br><span id='beginJS'>Add an event</span>";
                 node.className = "ownContextMenu";
                 node.style.left = e.clientX + "px";
                 node.style.top = e.clientY + "px";
