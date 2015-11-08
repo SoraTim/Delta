@@ -24,8 +24,7 @@ $(document).ready(function () {
         });
     }
 
-    $(document).on('click', '#refreshPageSpan', function () 
-    {
+    $(document).on('click', '#refreshPageSpan', function () {
         location.reload();
     });
     $("#leftSideBar span").click(function () {
@@ -60,6 +59,7 @@ $(document).ready(function () {
                 break;
         }
         var myNode = document.getElementById("pageHolder");
+        $(node).draggable();
         if (document.getElementById("clear").style.display == 'none')
             $("#clear").show();
         myNode.appendChild(node);
