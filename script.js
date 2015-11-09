@@ -13,6 +13,19 @@ $(document).ready(function () {
                 document.getElementsByTagName("body")[0].removeChild(elem);
         }
     });
+    $("#savePage").click(function () {
+        //AJAX- запрос на страницу ajaxPage.php. Асинхронное сохранение файла
+        $.ajax({
+            method:"POST",
+            url: "ajaxPage.php",
+            cache: false,
+            data: { action: "savePage", content: document.getElementById("codeEditorArea").value } //передать значение textarea в перемнной content для дальнейшей обрабаотки.
+        })
+        .done(function (html) { // в случае успеха
+            console.log("success!");
+            console.log(html);
+        });
+    });
     if (document.addEventListener) { //собственное контесктное меню на динамических элементах
         document.addEventListener('contextmenu', function (e) {
             if ($(e.target).is(".dynamicElement")) {
@@ -39,9 +52,6 @@ $(document).ready(function () {
     $(document).on('click', '#picChangeSpan', function (e) {
         $("#picHolder").trigger('click');
     });
-    //$(document).on('change', '#picHolder', function (e) {
-    //    console.log(e);
-    //});
     $("#picHolder").change(function () {
         document.getElementById("contexted").src = this.value;
     });
