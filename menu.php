@@ -69,7 +69,7 @@
          </div>
         <div id="topMenuBar">
             <div style="position: relative; width: 100%; height: 100%">
-                <div class="singleTab">
+                <div id="viewTab" class="singleTab">
                     Вид
                 </div>
                 <div id="code" class="singleTab">
@@ -77,6 +77,9 @@
                 </div>
                 <br>
                 <div id="pageHolder">
+                    <div id="blocksArea">
+                    </div>
+                    <textarea id="codeEditorArea" style="position:absolute; top: 0; resize: none; display: none"></textarea>
                 </div>
             </div>
         </div>
