@@ -67,6 +67,22 @@
                  </div>
              </div>
          </div>
+         <div id="contentOfFolder">
+            <div id="pagesWrapper">
+                 <div class="pagesBanner">
+                     Файлы
+                 </div>
+                <div class="filesCloud">
+                    <?php 
+                        $dir =scandir(__DIR__);
+                        foreach($dir as $value)
+                        if($value!=".."&&$value!="."&&$value!="style.css"&&$value!="script.js"&&$value!=".git"&&$value!="9YkBDt4T.ttf"&&$value!="readme.md"&&$value)
+                        if(!preg_match('/.php/i',$value))
+                        echo $value."<br>";
+                    ?>
+                </div>
+            </div>
+        </div>
         <div id="topMenuBar">
             <div style="position: relative; width: 100%; height: 100%">
                 <div id="viewTab" class="singleTab">
@@ -76,6 +92,7 @@
                     Код
                 </div>
                 <br>
+                <input type='file' style='display:none;' id='picHolder'>
                 <div id="pageHolder">
                     <div id="blocksArea">
                     </div>

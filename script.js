@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $('#blocksArea').bind("DOMSubtreeModified", function () {
         // С этой штукой надо разобраться. Это привязка к исходному коду. Нужны будут переносы, подсветка синтаксиса
         var str = document.getElementById("blocksArea").innerHTML;
@@ -7,16 +6,22 @@ $(document).ready(function () {
             str = str.substr(1);
         document.getElementById("codeEditorArea").value = str;
     });
-    $("html").click(function () { //спрятать контекстное меню
-        var elem = document.getElementsByClassName("ownContextMenu")[0];
-        if (elem != null)
-            document.getElementsByTagName("body")[0].removeChild(elem);
+    $("html").click(function (e) { //спрятать контекстное меню
+        if (!$(e.target).is('#picChangeSpan')) {
+            var elem = document.getElementsByClassName("ownContextMenu")[0];
+            if (elem != null)
+                document.getElementsByTagName("body")[0].removeChild(elem);
+        }
     });
     if (document.addEventListener) { //собственное контесктное меню на динамических элементах
         document.addEventListener('contextmenu', function (e) {
             if ($(e.target).is(".dynamicElement")) {
+                e.target.id = 'contexted';
+                var content = "<img src='refresh.png'><span id='refreshPageSpan'>Обновить</span><br><img src='addid.png'><span id='addId'>Назначить id</span><br><img src='class.png'><span id='changeClassSpan'>Изменить класс</span><br><img src='event.png'><span id='beginJS'>Присобачить событие</span>";
+                if (e.target.tagName == "IMG")
+                    content += "<br><span id='picChangeSpan'>Изменить изображение</span>";
                 var node = document.createElement("div");
-                node.innerHTML = "<img src='refresh.png'><span id='refreshPageSpan'>Обновить</span><br><img src='addid.png'><span id='addId'>Назначить id</span><br><img src='class.png'><span id='changeClassSpan'>Изменить класс</span><br><img src='event.png'><span id='beginJS'>Присобачить событие</span>";
+                node.innerHTML = content;
                 node.className = "ownContextMenu";
                 node.style.left = e.clientX + "px";
                 node.style.top = e.clientY + "px";
@@ -31,7 +36,15 @@ $(document).ready(function () {
             window.event.returnValue = false;
         });
     }
-
+    $(document).on('click', '#picChangeSpan', function (e) {
+        $("#picHolder").trigger('click');
+    });
+    //$(document).on('change', '#picHolder', function (e) {
+    //    console.log(e);
+    //});
+    $("#picHolder").change(function () {
+        document.getElementById("contexted").src = this.value;
+    });
     $(document).on('click', '#refreshPageSpan', function () {
         location.reload();
     });
