@@ -62,7 +62,7 @@
                  </div>
                  <div id="pagesLinks">
                      <ul>
-                         <li>index.php</li>
+                         <li>newpage.php</li>
                      </ul>
                  </div>
              </div>

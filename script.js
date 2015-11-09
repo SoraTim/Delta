@@ -1,4 +1,12 @@
 $(document).ready(function () {
+
+    $('#blocksArea').bind("DOMSubtreeModified", function () {
+        // С этой штукой надо разобраться. Это привязка к исходному коду. Нужны будут переносы, подсветка синтаксиса
+        var str = document.getElementById("blocksArea").innerHTML;
+        while (str.charAt(0) == ' ' || str.charAt(0) == '\n')
+            str = str.substr(1);
+        document.getElementById("codeEditorArea").value = str;
+    });
     $("html").click(function () { //спрятать контекстное меню
         var elem = document.getElementsByClassName("ownContextMenu")[0];
         if (elem != null)
@@ -8,7 +16,7 @@ $(document).ready(function () {
         document.addEventListener('contextmenu', function (e) {
             if ($(e.target).is(".dynamicElement")) {
                 var node = document.createElement("div");
-                node.innerHTML = "<img src='refresh.png'><span id='refreshPageSpan'>Refresh</span><br><span id='changeClassSpan'>Change class</span><br><span id='beginJS'>Add an event</span>";
+                node.innerHTML = "<img src='refresh.png'><span id='refreshPageSpan'>Обновить</span><br><img src='addid.png'><span id='addId'>Назначить id</span><br><img src='class.png'><span id='changeClassSpan'>Изменить класс</span><br><img src='event.png'><span id='beginJS'>Присобачить событие</span>";
                 node.className = "ownContextMenu";
                 node.style.left = e.clientX + "px";
                 node.style.top = e.clientY + "px";
@@ -73,7 +81,6 @@ $(document).ready(function () {
         if (document.getElementById("clear").style.display == 'none')
             $("#clear").show();
         myNode.appendChild(node); //вставка элемента в панель предварительного просмотра элемнтов
-        document.getElementById("codeEditorArea").innerHTML += str; //вставка разметки элемента в панель кода
     });
     //Очистить предварительный выбор элементов, очистить панель кода
     $("#clear").click(function () {
@@ -81,7 +88,7 @@ $(document).ready(function () {
         while (myNode.firstChild) {
             myNode.removeChild(myNode.firstChild);
         }
-        document.getElementById("codeEditorArea").innerHTML = "";
+        document.getElementById("codeEditorArea").innerHTML = document.getElementById("blocksArea").innerHTML;
         $("#clear").hide();
     })
     // Спрятать предварительный вид элементов, открыть панель кода
