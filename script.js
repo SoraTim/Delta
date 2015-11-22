@@ -16,10 +16,10 @@ $(document).ready(function () {
     $("#savePage").click(function () {
         //AJAX- запрос на страницу ajaxPage.php. Асинхронное сохранение файла
         $.ajax({
-            method:"POST",
+            method: "POST",
             url: "ajaxPage.php",
             cache: false,
-            data: { action: "savePage", content: document.getElementById("codeEditorArea").value } //передать значение textarea в перемнной content для дальнейшей обрабаотки.
+            data: { action: "savePage", content: document.getElementById("codeEditorArea").value} //передать значение textarea в перемнной content для дальнейшей обрабаотки.
         })
         .done(function (html) { // в случае успеха
             console.log("success!");
@@ -57,6 +57,13 @@ $(document).ready(function () {
     });
     $(document).on('click', '#refreshPageSpan', function () {
         location.reload();
+    });
+    $(document).on('click', '#addId', function () {
+        var subEl = document.createElement('div');
+        subEl.setAttribute('class', 'renameElement');
+        document.getElementById('curtain').style.display = "table";
+        subEl.innerHTML = "<h1 style='font-size:20px;color:#FFF;'>Переименовать элемент</h1><div id='renameHolder'><input placeholder='id' type='text'><button>Apply</button></div>";
+        document.getElementById('curtain').appendChild(subEl);
     });
     //добавление эелементов на панели кода и предварительного вида
     $("#leftSideBar span").click(function () {

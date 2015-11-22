@@ -15,6 +15,8 @@
 </div>
 <!-- MENU. END -->
 <div id="Content">
+    <div id="curtain">
+    </div>
         <div id="leftSideBar">
             <div id="leftSideWrap">
                 <div id="elementsList">

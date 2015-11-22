@@ -2,6 +2,30 @@
 {
     margin: 5px 5px;
 }
+#renameHolder
+{
+    display: inline-block;
+    padding: 4px;
+    border-radius: 5px;
+    background-color: rgba(72, 231, 17, 0.61);
+}
+.renameElement
+{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+#curtain
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0.76);
+}
 @font-face
 {
     src: url(9YkBDt4T.ttf);
@@ -186,6 +210,7 @@
     display: inline-block;
     width: calc(20% - 10px);
 }
+
 #leftSideBar span:hover
 {
     cursor: pointer;
