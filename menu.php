@@ -11,6 +11,15 @@
     <div class="menuDiv" id="clear" style="display: none">
         Очистить
     </div>
+    <div id="addFork">
+        <span>Добавить..</span>
+        <div id="catList">
+            Bootstrap<br>
+            AngularJS<br>
+            CoffeeScript<br>
+            JQuery
+        </div>
+    </div>
     <input type="text" placeholder="Название страницы">
 </div>
 <!-- MENU. END -->

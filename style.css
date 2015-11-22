@@ -2,6 +2,16 @@
 {
     margin: 5px 5px;
 }
+#catList
+{
+    display:none;
+    position: absolute;
+    z-index: 2;
+}
+#addFork
+{
+    display:inline-block;
+}
 #renameHolder
 {
     display: inline-block;

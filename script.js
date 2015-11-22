@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    $("#addFork span").hover(function () {
+        $("#catList").show();
+    },
+    function () {
+        $("#catList").hide();
+    });
     $('#blocksArea').bind("DOMSubtreeModified", function () {
         // С этой штукой надо разобраться. Это привязка к исходному коду. Нужны будут переносы, подсветка синтаксиса
         var str = document.getElementById("blocksArea").innerHTML;
@@ -55,6 +61,10 @@ $(document).ready(function () {
     $("#picHolder").change(function () {
         document.getElementById("contexted").src = this.value;
     });
+    $(document).on('click', '#close', function () {
+        document.getElementById('curtain').innerHTML = "";
+        document.getElementById('curtain').style.display = "none";
+    });
     $(document).on('click', '#refreshPageSpan', function () {
         location.reload();
     });
@@ -62,7 +72,7 @@ $(document).ready(function () {
         var subEl = document.createElement('div');
         subEl.setAttribute('class', 'renameElement');
         document.getElementById('curtain').style.display = "table";
-        subEl.innerHTML = "<h1 style='font-size:20px;color:#FFF;'>Переименовать элемент</h1><div id='renameHolder'><input placeholder='id' type='text'><button>Apply</button></div>";
+        subEl.innerHTML = "<h1 style='font-size:20px;color:#FFF;'>Переименовать элемент</h1><div id='renameHolder'><input placeholder='id' type='text'><button>Apply</button></div><br><br style='font-size:20px'><button id='close'>Закрыть</button>";
         document.getElementById('curtain').appendChild(subEl);
     });
     //добавление эелементов на панели кода и предварительного вида
